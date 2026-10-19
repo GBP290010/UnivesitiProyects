@@ -1,0 +1,268 @@
+:root {
+    --blanco: #ffffff;
+    --negro: #000000;
+    --gris: #e5e7eb;
+    --primario: #e11d48;
+    --secundario: #1E293B;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,*:before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-size: 16px;
+    font-family: 'krub', sans-serif;
+    background-image: linear-gradient(to top, #DFE9F3 0%, var(--blanco) 100%);
+
+}
+
+.contenedor{
+    max-width: 120rem; /* modifique */
+    /* width: 100%;    por mi */
+    margin: 0 auto; /* por mi */
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* flex-direction: row; */
+    
+}
+
+.boton {
+    background-color: green;
+    color: var(--blanco);
+    padding: 1.5rem 3rem;
+    margin-top: 3rem;
+    font-size: 1.8rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .8rem;
+    width: 90%;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: background-color .3s ease, transform .3s ease;
+}
+
+.boton:hover {
+    transform: translateY(-2px);
+
+}
+
+@media (min-width: 480px) {
+    .boton{
+        width: auto;
+    }
+    
+}
+
+.sombra{
+    box-shadow: 0px 5px 15px 0px rgb(112, 112, 112, 0.05 );
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+h1{
+    font-size: 3.8rem;
+}
+
+h2{
+    font-size: 2.8rem;
+}
+
+h3{
+    font-size: 1.8rem;
+}
+
+h1,h2,h3{
+    text-align: center;
+}
+
+.titulo span{
+    font-size: 2rem;
+}
+
+.nav-bg{
+    background-color: var(--secundario);
+}
+
+.navegacion-principal{
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .navegacion-principal{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .Servicios{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+    }
+
+}
+
+.navegacion-principal a{
+    display: block;
+    text-align: center;
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 700;
+    padding: 1.5rem 2rem;
+    /* margin: 0 auto; */
+}
+
+.navegacion-principal a:hover{
+    background-color: var(--primario);
+    color: var(--negro);
+}
+
+.img{
+    background-image: url(../img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 45rem;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.contenido-img{
+    position: absolute;
+    background-color: rgb(0 0 0 / 70%);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.contenido-img h2,
+.contenido-img p{
+    color: var(--blanco);
+    font-size: 3.2rem;
+    
+}
+
+.contenido-img .ubicacion{
+    display: flex;
+    align-items: first baseline;
+}
+
+.Servicios{
+    gap: 3rem;
+    
+}
+
+.Servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.Servicio h3{
+    color: var(--secundario);
+    font-weight: normal;
+}
+
+.Servicio .iconos{
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--primario);
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: .5rem solid var(--blanco);
+    box-shadow: 0 0 0 .2rem var(--primario);
+}
+
+.Servicio p{
+    line-height: 1.8;
+    text-align: center;
+    max-width: 35rem;
+}
+.formulario fieldset{
+    border: none;
+}
+
+.formulario{
+    background-color: var(--secundario);
+    width: min(60rem, 100%);
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    border-radius: 1rem;
+}
+
+.formulario legend{
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: var(--blanco);
+}
+
+.campo{
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.campo label{
+    color: var(--blanco);
+    font-weight: bold;
+    display: block;
+    margin-bottom: .8rem;
+}
+
+.input-text{
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+
+
+.campo input,
+.campo textarea{
+    width: 100%;
+    border: .1rem solid #d1d5db;
+    padding: 1.5rem;
+    border-radius: .5rem;
+    font-family: inherit;
+    font-size: 1.6rem;
+}
+
+.campo textarea{
+    height: 20rem;
+    resize: vertical;
+}
+
+.footer {
+    background-color: var(--secundario);
+    color: var(--blanco);
+    text-align: center;
+    font-weight: bold;
+    padding: 1rem;
+    margin-top: 3rem;
+}
+
+.alinear-derecha {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.posicion {
+    display: flex;
+}
